@@ -1,6 +1,8 @@
 package fr.univ_amu.iut.beans;
 
-public class Prof {
+import java.io.Serializable;
+
+public class Prof implements Serializable{
     private int numProf;
     private String nomProf;
     private String prenomProf;
@@ -77,5 +79,16 @@ public class Prof {
                 + (cpProf != null ? "cpProf=" + cpProf + ", " : "")
                 + (villeProf != null ? "villeProf=" + villeProf + ", " : "")
                 + (matSpec != null ? "matSpec=" + matSpec.getCode() : "") + "]";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        // TODO Auto-generated method stub
+        return super.equals(obj);
+    }
+    @Override
+    public int hashCode() {
+        // TODO Auto-generated method stub
+        return super.hashCode();
     }
 }

@@ -1,6 +1,8 @@
 package fr.univ_amu.iut.beans;
 
-public class Module {
+import java.io.Serializable;
+
+public class Module implements Serializable{
     private String code;
     private String libelle;
     private int hCoursPrev;
@@ -114,5 +116,16 @@ public class Module {
                 + "coeffTest=" + coefTest + ", coefCc=" + coefCc + ", "
                 + (responsable != null ? "responsable=" + responsable.getNomProf() + ", " : "")
                 + (pere != null ? "pere=" + pere.getCode() : "") + "]";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        // TODO Auto-generated method stub
+        return super.equals(obj);
+    }
+    @Override
+    public int hashCode() {
+        // TODO Auto-generated method stub
+        return super.hashCode();
     }
 }
