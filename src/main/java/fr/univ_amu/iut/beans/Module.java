@@ -14,6 +14,7 @@ public class Module implements Serializable{
     private int coefCc;
     private Prof responsable;
     private Module pere;
+    
 
     public Module() {
     }
