@@ -1,6 +1,8 @@
 package fr.univ_amu.iut.beans;
 
-public class Etudiant {
+import java.io.Serializable;
+
+public class Etudiant implements Serializable{
     private int numEt;
     private String nomEt;
     private String prenomEt;
@@ -77,5 +79,16 @@ public class Etudiant {
                 + (villeEt != null ? "villeEt=" + villeEt + ", " : "")
                 + "annee=" + annee + ", groupe=" + groupe + ", "
                 + "]";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        // TODO Auto-generated method stub
+        return super.equals(obj);
+    }
+    @Override
+    public int hashCode() {
+        // TODO Auto-generated method stub
+        return super.hashCode();
     }
 }
